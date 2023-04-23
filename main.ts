@@ -3,7 +3,10 @@ input.onButtonPressed(Button.A, function () {
     basic.showString("" + (step))
 })
 input.onButtonPressed(Button.AB, function () {
-	
+    radio.sendNumber(step)
+})
+radio.onReceivedString(function (receivedString) {
+    basic.showString("Hello!")
 })
 input.onButtonPressed(Button.B, function () {
     StepText = convertToText(step)
